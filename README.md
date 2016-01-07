@@ -48,7 +48,20 @@ For our app we'll be looking for the following features:
   + [Nice to have] flags on what (not) write to file.
 + Copy specific field (like CPU name) to clipboard.
 
+###Sketches
+
+![](pics/sketches/DeviceFragment.png)
+![](pics/sketches/SoundFragment.png)
+![](pics/sketches/NavigationMenu.png)
+![](pics/sketches/SaveDialog.png)
+![](pics/sketches/SettingsActivity.png)
+
 ###Possible Issues
 + Hard to test in emulators
 + CPU Codenames would have to be manually stored somewhere (and updated)
 + Doesn't really use any fancy APIs (unless you count `/proc`)
+
+
+- - -
+
+Joost Bremmer < [toost.b@gmail.com](mailto:toost.b@gmail.com) >
