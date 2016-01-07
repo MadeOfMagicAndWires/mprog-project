@@ -9,7 +9,7 @@
 
 ## Model class diagram
 
-Our app will contain at least four model classes whose hierachy will look something like this:
+Our app hierachy will look something like this:
 
 ![Class Diagram](pics/design/ClassDiagram.png)
 
@@ -25,3 +25,6 @@ All of our app will be written in Java, by which we will be adherring to the
 For our project structure and coding practices we'll try to follow 
 [futurice's "Best Practices"](https://github.com/futurice/android-best-practices) as closely as possible,
 without going against what we've learned for Native App Studio, breaking compatability, or creating unnecessary extra work.
+
+- - -
+Joost Bremmer < [toost.b@gmail.com](mailto:toost.b@gmail.com) >
