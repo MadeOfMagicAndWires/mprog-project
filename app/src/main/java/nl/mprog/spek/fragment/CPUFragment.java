@@ -11,17 +11,17 @@ import nl.mprog.spek.model.Hardware;
 
 /**
  *
- * DeviceFragment class.
+ * CPUFragment class.
  *
  */
-public class DeviceFragment extends SpekFragment implements HardwareInfoInterface {
-    public DeviceFragment() {
+public class CPUFragment extends SpekFragment implements HardwareInfoInterface {
+    public CPUFragment() {
         // Required empty public constructor
     }
 
 
-    public static DeviceFragment newInstance(String param1, String param2) {
-        return (DeviceFragment) SpekFragment.newInstance(param1, param2);
+    public static CPUFragment newInstance(String param1, String param2) {
+        return (CPUFragment) SpekFragment.newInstance(param1, param2);
     }
 
     @Override
@@ -33,12 +33,7 @@ public class DeviceFragment extends SpekFragment implements HardwareInfoInterfac
 
     @Override
     public void setMapData() {
-        assert(info != null);
-        assert(infoAdapter != null);
-        info.put("Brand", Hardware.Device.BRAND);
-        info.put("Model", Hardware.Device.MODEL);
-        info.put("Manufacturer", Hardware.Device.MANUFACTURER);
-        Log.d("Map size", String.valueOf(info.size()));
+        //TODO: Get CPU INFORMATION.
     }
 
 }
