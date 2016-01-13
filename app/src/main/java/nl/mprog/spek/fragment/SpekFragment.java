@@ -12,6 +12,8 @@ import android.widget.ListView;
 
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.TreeMap;
 
 
 import nl.mprog.spek.R;
@@ -26,7 +28,7 @@ import nl.mprog.spek.view.adapter.MapAdapter;
 
 public class SpekFragment extends Fragment {
 
-    static final protected HashMap<String, String> info = new HashMap<>();
+    static final protected LinkedHashMap<String, String> info = new LinkedHashMap<>();
     static public MapAdapter infoAdapter;
 
     public SpekFragment() {
@@ -55,9 +57,7 @@ public class SpekFragment extends Fragment {
         //set the data to be shown and adapt it.
         setMapData();
         setAdapter(fragment);
-
-        info.put("Label", "Data");
-        infoAdapter.notifyDataSetInvalidated();
+        infoAdapter.notifyDataSetChanged();
 
         return fragment;
     }

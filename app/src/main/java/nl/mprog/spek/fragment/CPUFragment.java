@@ -25,13 +25,6 @@ public class CPUFragment extends SpekFragment implements HardwareInfoInterface {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        return super.onCreateView(inflater, container, savedInstanceState);
-
-    }
-
-    @Override
     public void setMapData() {
         //TODO: Get CPU INFORMATION.
     }

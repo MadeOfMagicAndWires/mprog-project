@@ -36,7 +36,6 @@ public class MapAdapter extends BaseAdapter {
         super();
         mData = map;
         mKeys = new ArrayList<>(mData.keySet());
-
     }
 
     /**
