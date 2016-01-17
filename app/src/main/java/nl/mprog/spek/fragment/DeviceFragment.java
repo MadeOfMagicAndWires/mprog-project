@@ -32,6 +32,8 @@ public class DeviceFragment extends SpekFragment implements HardwareInfoInterfac
     @Override
     @TargetApi(Build.VERSION_CODES.M)
     public void setMapData() {
+        super.setMapData();
+
         assert(info != null);
         assert(infoAdapter != null);
 
@@ -47,8 +49,6 @@ public class DeviceFragment extends SpekFragment implements HardwareInfoInterfac
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
             info.put("Security Patch Version", Hardware.Device.getSecurityPatch());
         }
-
-        Log.d("Map size", String.valueOf(info.size()));
     }
 
 }

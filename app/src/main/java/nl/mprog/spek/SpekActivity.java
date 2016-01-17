@@ -87,7 +87,6 @@ public class SpekActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-    //TODO: Why dunnae it work?
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -108,7 +107,6 @@ public class SpekActivity extends AppCompatActivity
                 fragment = new SpekFragment();
                 break;
         }
-        Log.d("Container view", findViewById(R.id.fragment_container).toString());
         fragmanager.beginTransaction().replace(R.id.fragment_container, fragment).commit();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

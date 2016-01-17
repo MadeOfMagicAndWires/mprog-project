@@ -25,8 +25,24 @@ public class CPUFragment extends SpekFragment implements HardwareInfoInterface {
     }
 
     @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        return super.onCreateView(inflater, container, savedInstanceState);
+    }
+
+    @Override
     public void setMapData() {
-        //TODO: Get CPU INFORMATION.
+        super.setMapData();
+
+        info.put("Processor", Hardware.CPU.NAME);
+        info.put("Architecture", Hardware.CPU.ARCH);
+        info.put("Cores", String.valueOf(Hardware.CPU.CORE_COUNT));
+
     }
 
 }

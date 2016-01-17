@@ -68,7 +68,7 @@ public class SpekFragment extends Fragment {
      * the key being a label and the value the actual data you want shown.
      */
     public void setMapData(){
-
+        info.clear();
     }
 
 
