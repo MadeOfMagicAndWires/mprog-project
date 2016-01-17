@@ -1,3 +1,12 @@
+/**
+ * Superclass for all fragments.
+ * Not to be meddled or trifled with! Certainly not to be initialized.
+ * Unfortunately can't make it abstract because newInstance makes an instance of this class.
+ *
+ * @author Joost Bremmer
+ * @since 2016
+ */
+
 package nl.mprog.spek.fragment;
 
 import android.content.Context;
@@ -20,11 +29,6 @@ import nl.mprog.spek.R;
 import nl.mprog.spek.model.Hardware;
 import nl.mprog.spek.view.adapter.MapAdapter;
 
-/**
- * Superclass for all fragments.
- * Not to be meddled or trifled with! Certainly not to be initialized.
- * Unfortunately can't make it abstract because newInstance makes an instance of this class.
- */
 
 public class SpekFragment extends Fragment {
 

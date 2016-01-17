@@ -1,3 +1,10 @@
+/**
+ * CPU Fragment class used to display CPU information from Hardware on screen.
+ *
+ * @author Joost Bremmer
+ * @since  2016
+ */
+
 package nl.mprog.spek.fragment;
 
 import android.os.Bundle;
@@ -9,11 +16,6 @@ import android.view.ViewGroup;
 import nl.mprog.spek.interfaces.HardwareInfoInterface;
 import nl.mprog.spek.model.Hardware;
 
-/**
- *
- * CPUFragment class.
- *
- */
 public class CPUFragment extends SpekFragment implements HardwareInfoInterface {
     public CPUFragment() {
         // Required empty public constructor

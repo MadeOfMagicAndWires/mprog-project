@@ -1,3 +1,11 @@
+/**
+ * Map Adapter class to relay a Map of key-value entries to a ViewGroup
+ *
+ * @author Joost Bremmer
+ * @since  2016
+ *
+ */
+
 package nl.mprog.spek.view.adapter;
 
 import android.content.Context;
@@ -14,15 +22,12 @@ import java.util.ArrayList;
 import java.util.Map;
 import nl.mprog.spek.R;
 
-/**
- * Adapter class to relay a Map of key-value entries to a ViewGroup
- */
-
 public class MapAdapter extends BaseAdapter {
 
     private final Map mData;
     private final ArrayList mKeys;
 
+    //TODO: documentation.
     private static class ViewHolder{
         TextView key;
         TextView value;

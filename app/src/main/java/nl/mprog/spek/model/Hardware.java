@@ -1,3 +1,11 @@
+/**
+ * Hardware model class, used for getting and containing hardware information.
+ *
+ * @author Joost Bremmer
+ * @since  2016
+ */
+
+
 package nl.mprog.spek.model;
 
 import android.annotation.TargetApi;
@@ -15,17 +23,15 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 
-/**
- * Hardware model class, containing the actual hardware information
- */
-
 public abstract class Hardware {
 
     public static final String KERNEL_PROC = "version";
     public static final String CPU_PROC    = "cpuinfo";
 
 
-
+    /**
+     * Device class containing basic device info like name, model and OS version.
+     */
     public static class Device {
         public static final String BRAND = Build.BRAND;
         public static final String MODEL = Build.MODEL;
@@ -41,6 +47,7 @@ public abstract class Hardware {
          */
         public static String getDeviceVersion() {
             StringBuilder version = new StringBuilder();
+            //TODO: get "Android" programmatically?
             version.append("Android" + " ");
             version.append(Build.VERSION.RELEASE + " ");
             version.append('(' + Build.DISPLAY + ')');
@@ -58,6 +65,10 @@ public abstract class Hardware {
     }
 
 
+    /**
+     * CPU class, containing various CPU information, such as Chipset, architecture, core amount
+     * and CPU usage stats.
+     */
     public static class CPU {
         public static String NAME    = getSubFields(CPU_PROC, "Hardware", "[^:]+$",
                 "Could not find processor name").get(0);
@@ -70,12 +81,26 @@ public abstract class Hardware {
     }
 
 
+    /**
+     * Memory class containing various information about the virtual and physical memory.
+     */
     public static class Memory {
+        public static long V_MEM = Runtime.getRuntime().totalMemory();
+        public static long FREE_MEM = Runtime.getRuntime().freeMemory();
 
     }
 
     /**
+     * Graphics class containing various information about the video card and display.
      *
+     */
+    public static class Graphics {
+
+    }
+
+
+    /**
+     * Gets full lines
      * @param filename name of the file searched, residing in /proc/
      * @param pattern  pattern to search in file
      * @param errorMsg error message to display, if no matches were found

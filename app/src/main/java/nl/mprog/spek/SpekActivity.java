@@ -1,3 +1,8 @@
+/**
+ * SpekActivity class used for containing various fragments.
+ *
+ */
+
 package nl.mprog.spek;
 
 import android.support.v4.app.Fragment;
@@ -19,6 +24,8 @@ import android.view.MenuItem;
 
 import nl.mprog.spek.fragment.CPUFragment;
 import nl.mprog.spek.fragment.DeviceFragment;
+import nl.mprog.spek.fragment.GraphicsFragment;
+import nl.mprog.spek.fragment.MemoryFragment;
 import nl.mprog.spek.fragment.SpekFragment;
 
 public class SpekActivity extends AppCompatActivity
@@ -102,6 +109,12 @@ public class SpekActivity extends AppCompatActivity
                 break;
             case R.id.nav_cpu:
                 fragment = new CPUFragment();
+                break;
+            case R.id.nav_memory:
+                fragment = new MemoryFragment();
+                break;
+            case R.id.nav_graphics:
+                fragment = new GraphicsFragment();
                 break;
             default:
                 fragment = new SpekFragment();

@@ -1,3 +1,10 @@
+/**
+ * Device Fragment class used to display Device information from Hardware on screen.
+ *
+ * @author Joost Bremmer
+ * @since  2016
+ */
+
 package nl.mprog.spek.fragment;
 
 import android.annotation.TargetApi;
@@ -13,11 +20,6 @@ import java.io.File;
 import nl.mprog.spek.interfaces.HardwareInfoInterface;
 import nl.mprog.spek.model.Hardware;
 
-/**
- *
- * DeviceFragment class.
- *
- */
 public class DeviceFragment extends SpekFragment implements HardwareInfoInterface {
     public DeviceFragment() {
         // Required empty public constructor
