@@ -76,11 +76,34 @@ public class SpekFragment extends Fragment {
     }
 
 
+    /**
+     * Creates a new adapter to process Map entries, and links it to Listview.
+     * @param view View containing a ListView with the id info_list.
+     */
     public void setAdapter(View view){
         //init Adapter and bind it to the Listview
         infoAdapter = new MapAdapter(info);
         ListView infoList = (ListView) view.findViewById(R.id.info_list);
         infoList.setAdapter(infoAdapter);
+    }
+
+    /**
+     * Creates a new adapter to process Map entries, and links it to Listview.
+     * @param view ListView you want to display the Map entries in.
+     */
+    public void setAdapter(ListView view){
+        //init Adapter and bind it to the Listview
+        infoAdapter = new MapAdapter(info);
+        view.setAdapter(infoAdapter);
+    }
+
+    /**
+     * Returns a number of bytes as a more human readable string.
+     * @param n long, the amount of bytes you need formatted.
+     * @return String "n (bytes,kB,MB, and so on)"
+     */
+    public String formatFileSize(long n){
+        return android.text.format.Formatter.formatFileSize(getActivity(), n);
     }
 
 }

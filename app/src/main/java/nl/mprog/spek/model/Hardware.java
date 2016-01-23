@@ -9,6 +9,7 @@
 package nl.mprog.spek.model;
 
 import android.annotation.TargetApi;
+import android.app.ActivityManager;
 import android.content.Context;
 import android.os.Build;
 import android.util.Log;
@@ -25,9 +26,10 @@ import java.util.regex.Pattern;
 
 public abstract class Hardware {
 
+    /* Strings of various filenames in /proc */
     public static final String KERNEL_PROC = "version";
     public static final String CPU_PROC    = "cpuinfo";
-
+    public static final String MEM_PROC    = "meminfo";
 
     /**
      * Device class containing basic device info like name, model and OS version.
@@ -87,6 +89,14 @@ public abstract class Hardware {
     public static class Memory {
         public static long V_MEM = Runtime.getRuntime().totalMemory();
         public static long FREE_MEM = Runtime.getRuntime().freeMemory();
+
+
+        public static long getTotalRam(Context c){
+            ActivityManager manager = (ActivityManager) c.getSystemService(Context.ACTIVITY_SERVICE);
+            ActivityManager.MemoryInfo mem = new ActivityManager.MemoryInfo();
+            manager.getMemoryInfo(mem);
+            return mem.totalMem;
+        }
 
     }
 

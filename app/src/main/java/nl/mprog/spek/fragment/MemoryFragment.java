@@ -23,8 +23,10 @@ public class MemoryFragment extends SpekFragment implements HardwareInfoInterfac
     @Override
     public void setMapData() {
         super.setMapData();
-        info.put("Virtual Memory Size", String.valueOf(Hardware.Memory.V_MEM));
-        info.put("Free Memory", String.valueOf(Hardware.Memory.FREE_MEM));
+
+        info.put("Total RAM", formatFileSize(Hardware.Memory.getTotalRam(getActivity())));
+        info.put("Virtual Memory Size", formatFileSize(Hardware.Memory.V_MEM));
+        info.put("Free Memory", formatFileSize(Hardware.Memory.FREE_MEM));
     }
 
 }
